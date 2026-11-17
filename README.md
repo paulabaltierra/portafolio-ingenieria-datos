@@ -19,11 +19,11 @@ Proyectos en Python, SQL, PostgreSQL, Azure y Power BI. Las demos muestran cómo
 
 | Caso | Qué analiza | Tecnologías |
 | --- | --- | --- |
-| [Retención de clientes de una startup](proyectos-diplomado/retencion-startup/README.md) | Compara cohortes para observar la permanencia después de la primera actividad. | SQL, BigQuery |
-| [Segmentación de clientes de comercio electrónico](proyectos-diplomado/segmentacion-ecommerce/README.md) | Agrupa clientes por recencia, frecuencia y valor monetario de compra (RFM). | SQL, BigQuery |
+| [Retención de clientes de una startup](proyectos-diplomado/retencion-startup/README.md) | Consulta autocontenida con eventos sintéticos para calcular la retención mensual por cohorte. | SQL, BigQuery |
+| [Segmentación de clientes de comercio electrónico](proyectos-diplomado/segmentacion-ecommerce/README.md) | Consulta autocontenida de recencia, frecuencia y valor monetario (RFM) con fecha de corte fija. | SQL, BigQuery |
 | [Análisis de COVID-19](proyectos-diplomado/analisis-covid/README.md) | Explora tendencias temporales y geográficas en datos públicos. | SQL, BigQuery |
 | [Retención en telecomunicaciones](proyectos-diplomado/telecom-powerbi/README.md) | Examina la pérdida de clientes y presenta sus indicadores en un reporte interactivo. | Power BI, DAX, Excel |
 
 ## Datos de ejemplo
 
-Las réplicas en Azure se inspiran en problemas que trabajé en contextos laborales y usan datos de demostración. El proyecto de morosidad usa datos sintéticos. Los casos del diplomado documentan el enfoque y emplean tablas de referencia en sus ejemplos.
+Las réplicas en Azure se inspiran en problemas que trabajé en contextos laborales y usan datos de demostración. El proyecto de morosidad usa datos sintéticos. Las adaptaciones de retención y RFM incluyen datos sintéticos dentro de las consultas.

@@ -1,13 +1,13 @@
-# Segmentación de clientes e-commerce
+# Segmentación de clientes de comercio electrónico
 
-## Objetivo
+El ejercicio original organiza clientes según recencia, frecuencia y valor monetario (RFM). Esta adaptación calcula y puntúa las tres métricas con pedidos sintéticos.
 
-Convertir el historial de compra en segmentos accionables para priorizar campañas, fidelización y recuperación de clientes.
+## Ejecutar la consulta
 
-## Enfoque
+Abre [segmentacion_rfm.sql](segmentacion_rfm.sql) en BigQuery y ejecútala como GoogleSQL. Los pedidos de ejemplo están dentro de la consulta y cada fila representa un pedido.
 
-Se utiliza una segmentación RFM: recencia de compra, frecuencia y valor monetario. El resultado permite distinguir clientes de alto valor, clientes recurrentes, clientes nuevos y clientes en riesgo de inactividad.
+- **Recencia:** días entre la última compra y el 1 de abril de 2024.
+- **Frecuencia:** número de pedidos distintos hasta la fecha de corte.
+- **Valor monetario:** suma de los importes hasta esa fecha.
 
-## Tecnologías
-
-BigQuery y SQL. Consulta de referencia: [segmentacion_rfm.sql](segmentacion_rfm.sql).
+El cliente `C01` debe devolver **2 días, 2 pedidos y 300.00**. El pedido del 2 de abril debe quedar fuera del cálculo de `C04`, cuyo valor es **120.00**. Los puntajes van del 1 al 4 y se desempata por identificador para que el ejemplo sea reproducible. En una aplicación real, convendría acordar cómo tratar los empates y qué reglas convierten los puntajes en segmentos de negocio.
