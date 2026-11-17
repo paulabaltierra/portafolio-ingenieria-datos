@@ -1,50 +1,29 @@
-# Portafolio de Análisis de Datos
+# Portafolio de ingeniería de datos y automatización
 
-Este repositorio funciona como portafolio de proyectos de **análisis de datos aplicados a necesidades reales de negocio**.  
-Los proyectos incluyen análisis exploratorio, definición de KPIs, automatización de reportes, dashboards y modelos de proyección, desarrollados con enfoque técnico y orientación a la toma de decisiones.
+Proyectos en Python, SQL, PostgreSQL, Azure y Power BI. Las demos muestran cómo integro y valido datos operativos, automatizo tareas repetitivas y preparo modelos para análisis. El portafolio también incluye mi trabajo final de maestría y casos del diplomado.
 
-Cada proyecto cuenta con su propio repositorio, código documentado y una explicación clara del problema, el enfoque y los resultados.
+## Proyectos de ingeniería de datos y automatización
 
----
+| Proyecto | Qué demuestra | Tecnologías |
+| --- | --- | --- |
+| [Ingesta para auditoría de cortes](https://github.com/paulabaltierra/ingesta-auditoria-cortes) | Demo de ingesta diaria con seis fuentes ficticias de archivos. Procesa los CSV disponibles, normaliza los movimientos y usa una clave por fuente y fecha operativa, con parte opcional, y un hash SHA-256 para reconocer archivos ya cargados y detectar modificaciones posteriores. Primera versión comprobada en PostgreSQL local y pendiente de publicar. | Python, PostgreSQL, SQL |
+| [Servicios técnicos](https://github.com/paulabaltierra/dashboard--serviciosTecnicos) | Réplica en Azure de un caso de mantenimiento. Transforma órdenes de servicio con PySpark y construye tablas de hechos y dimensiones para medir los SLA de respuesta y reparación e identificar fallas recurrentes. | Azure Data Lake, Synapse, PySpark, Power BI |
+| [Asistencia de RH](https://github.com/paulabaltierra/dashboard--asistencia) | Réplica en Azure de un caso de control de asistencia. Los notebooks preparan dimensiones, procesan registros de checador y calculan la jornada esperada a partir de calendarios y turnos. El modelo permite revisar retardos, ausencias y cumplimiento de horarios. | Azure Data Lake, Synapse, PySpark, Power BI |
+| [Proyección de consumo](https://github.com/paulabaltierra/dashboadr--proyeccion--proteina) | Réplica en desarrollo para estimar el consumo de proteína con datos ficticios de ventas y compras de cinco restaurantes durante 2020. Incluye archivos de muestra, un modelo semántico y un reporte. Queda pendiente desarrollar los notebooks de ingesta y transformación. | Azure Data Lake, Power BI |
 
-## Proyectos
+## Trabajo final de maestría
 
-| Proyecto | Descripción | Tecnologías | Enlace |
-|---------|-------------|-------------|--------|
-| Proyección de consumo | Análisis histórico y proyección de consumo con escenarios para planeación | Python, pandas, Excel | [Ver proyecto](https://github.com/paulaSeptiembre/dashboadr--proyeccion--proteina) |
-| Servicios técnicos | Análisis operativo de servicios técnicos mediante un dashboard construido sobre un flujo de datos empresarial simulado en Azure, desde ingesta en Data Lake hasta modelado analítico y visualización. | Azure Data Lake, Synapse, PySpark, Power BI | [Ver proyecto](https://github.com/paulaSeptiembre/dashboard--serviciosTecnicos) |
-| Control de asistencias RH | Análisis de asistencia y ausentismo mediante un dashboard construido sobre un flujo de datos empresarial simulado en Azure, desde ingesta en Data Lake y procesamiento en Synapse hasta modelado y visualización para gestión de capital humano. | Azure Data Lake, Synapse, Power BI, Power Query | [Ver proyecto](https://github.com/paulaSeptiembre/dashboard--asistencia) |
-| Morosidad y antigüedad de clientes | Segmentación de riesgo de cartera por antigüedad, actividad de compra y Pareto 80/20; incluye correlación point-biserial y prueba de permutación. | Python, CSV, JSON | [Ver proyecto](https://github.com/paulaSeptiembre/morosidad-antiguedad-clientes) |
-| Casos de análisis del diplomado | Casos académicos de retención, segmentación de clientes, COVID-19 y telecomunicaciones; documentan preguntas de negocio y enfoques reproducibles sin exponer datos fuente. | BigQuery, SQL, Power BI, Excel | [Ver casos](proyectos-diplomado/README.md) |
+[Morosidad y antigüedad de clientes](https://github.com/paulabaltierra/morosidad-antiguedad-clientes) analiza la relación entre antigüedad, actividad de compra y riesgo de morosidad. El flujo reproducible usa datos sintéticos, segmentación Pareto 80/20, correlación point-biserial y una prueba de permutación para evaluar segmentos de cartera. Trabajo final de la Maestría en Ciencia de Datos para Negocios, concluida en octubre de 2026.
 
----
+## Casos del diplomado
 
-## Sobre los datos utilizados
+| Caso | Qué analiza | Tecnologías |
+| --- | --- | --- |
+| [Retención de clientes de una startup](proyectos-diplomado/retencion-startup/README.md) | Compara cohortes para observar la permanencia después de la primera actividad. | SQL, BigQuery |
+| [Segmentación de clientes de comercio electrónico](proyectos-diplomado/segmentacion-ecommerce/README.md) | Agrupa clientes por recencia, frecuencia y valor monetario de compra (RFM). | SQL, BigQuery |
+| [Análisis de COVID-19](proyectos-diplomado/analisis-covid/README.md) | Explora tendencias temporales y geográficas en datos públicos. | SQL, BigQuery |
+| [Retención en telecomunicaciones](proyectos-diplomado/telecom-powerbi/README.md) | Examina la pérdida de clientes y presenta sus indicadores en un reporte interactivo. | Power BI, DAX, Excel |
 
-Los proyectos presentados se basan en **problemáticas reales identificadas en contextos empresariales**.  
-Por motivos de confidencialidad, los **datos utilizados son ficticios o anonimizados**, manteniendo la estructura, complejidad y lógica del escenario original.
+## Datos de ejemplo
 
-El objetivo de estos proyectos es demostrar el **enfoque analítico, la metodología y la capacidad de traducir datos en información útil para la toma de decisiones**, sin comprometer información sensible de ninguna empresa.
-
----
-
-## Enfoque del portafolio
-
-Este portafolio está orientado a:
-
-- Análisis de datos para negocio  
-- Visualización y dashboards  
-- Automatización de procesos analíticos  
-- Documentación clara para audiencias técnicas y no técnicas  
-
----
-
-## Tecnologías utilizadas
-
-Python · SQL · Excel · Power BI · Azure · Synapse · PySpark · DAX
-
----
-
-### Nota
-
-Este portafolio se encuentra en evolución continua y se actualiza conforme se desarrollan nuevos proyectos y mejoras.
+Las réplicas en Azure se inspiran en problemas que trabajé en contextos laborales y usan datos de demostración. El proyecto de morosidad usa datos sintéticos. Los casos del diplomado documentan el enfoque y emplean tablas de referencia en sus ejemplos.
